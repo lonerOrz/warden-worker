@@ -2,12 +2,12 @@ name = "warden-worker"
 main = "src/entry.js"
 compatibility_date = "2025-09-19"
 keep_vars = true
-workers_dev = false
+workers_dev = true
 preview_urls = false
 
 [durable_objects]
 bindings = [
-  # Offload CPU-heavy endpoints to Durable Objects 
+  # Offload CPU-heavy endpoints to Durable Objects
   # (100,000 requests, 13,000 GB-s duration / day in free plan),
   # while keeping the main Worker fast for the rest.
   #
